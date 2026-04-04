@@ -1,0 +1,245 @@
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1A0A00 0%, #2D1800 50%, #1B3A2A 100%);
+}
+.heroBg { position: absolute; inset: 0; pointer-events: none; }
+.heroOrb1 {
+  position: absolute; top: -15%; right: -10%;
+  width: 65vw; height: 65vw; max-width: 700px; max-height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,82,10,0.25) 0%, transparent 70%);
+}
+.heroOrb2 {
+  position: absolute; bottom: -20%; left: -5%;
+  width: 50vw; height: 50vw; max-width: 500px; max-height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27,107,58,0.2) 0%, transparent 70%);
+}
+.heroPattern {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.heroText { max-width: 680px; }
+
+.heroPill {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(232,82,10,0.18);
+  border: 1px solid rgba(232,82,10,0.35);
+  border-radius: 99px;
+  color: #FF9966;
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 1.2rem;
+}
+.heroTitle span { color: var(--saffron-light); }
+
+.heroSub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  max-width: 540px;
+}
+
+.heroSearch {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 520px;
+  margin-bottom: 1.75rem;
+}
+.heroInput {
+  flex: 1;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--r-sm);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s;
+}
+.heroInput::placeholder { color: rgba(255,255,255,0.4); }
+.heroInput:focus        { border-color: var(--saffron-light); }
+.heroSearchBtn          { flex-shrink: 0; }
+
+.heroCtas { display: flex; gap: 0.875rem; flex-wrap: wrap; }
+
+.heroStats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+}
+.stat span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--saffron-light);
+  font-weight: 800;
+}
+.stat p { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.1rem; }
+
+/* ── Trust bar ────────────────────────────────────────────── */
+.trustBar {
+  background: var(--dark-2);
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.trustGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.trust {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.trust span { font-size: 1.1rem; }
+
+/* ── Section base ─────────────────────────────────────────── */
+.section { padding: 4rem 0; }
+.sectionHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ── Category grid ────────────────────────────────────────── */
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.875rem;
+}
+.catCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  background: var(--cat-bg, var(--bg-input));
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border);
+  text-align: center;
+  transition: all var(--transition);
+}
+.catCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--saffron);
+}
+.catEmoji { font-size: 1.75rem; }
+.catName  { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); line-height: 1.3; }
+
+/* ── Promo Banner ─────────────────────────────────────────── */
+.promoBanner { padding: 2rem 0 4rem; }
+.promoGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.25rem;
+}
+.promoCard {
+  border-radius: var(--r-lg);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.promoCard h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+.promoCard h3 span { color: var(--saffron-light); }
+.promoMain  {
+  background: linear-gradient(135deg, #1A0A00, #3D1800);
+  color: #fff;
+}
+.promoMain h3 span { color: var(--gold-light); }
+.promoSub   {
+  background: linear-gradient(135deg, var(--forest), #0D3D20);
+  color: #fff;
+}
+.promoTert  {
+  background: linear-gradient(135deg, #4A1060, #1A0030);
+  color: #fff;
+}
+.promoLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* ── CTA Section ──────────────────────────────────────────── */
+.ctaSection { padding: 2rem 0 4rem; }
+.ctaBox {
+  background: linear-gradient(135deg, var(--saffron) 0%, #c94208 100%);
+  border-radius: var(--r-xl);
+  padding: 3rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.ctaBox h2 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+.ctaBox p { color: rgba(255,255,255,0.8); font-size: 1rem; }
+.ctaBtns  { display: flex; gap: 0.875rem; flex-wrap: wrap; }
+
+@media (max-width: 1100px) { .catGrid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 900px) {
+  .promoGrid { grid-template-columns: 1fr 1fr; }
+  .promoMain { grid-column: 1 / -1; }
+  .catGrid   { grid-template-columns: repeat(4, 1fr); }
+  .heroStats { gap: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .catGrid   { grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+  .catEmoji  { font-size: 1.4rem; }
+  .catName   { font-size: 0.68rem; }
+  .catCard   { padding: 0.875rem 0.4rem; }
+  .promoGrid { grid-template-columns: 1fr; }
+  .ctaBox    { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+  .ctaBtns   { justify-content: center; }
+  .heroSearch { flex-direction: column; }
+  .trustGrid  { gap: 1rem; justify-content: flex-start; }
+}

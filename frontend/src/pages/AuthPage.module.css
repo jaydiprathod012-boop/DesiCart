@@ -1,0 +1,42 @@
+.page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #1A0A00 0%, #2D1800 60%, #1B3A2A 100%);
+  padding: 2rem 1rem;
+}
+.card {
+  background: var(--bg-card);
+  border-radius: var(--r-xl);
+  padding: 2.5rem;
+  width: 100%; max-width: 420px;
+  box-shadow: var(--shadow-lg);
+  animation: fadeUp 0.4s ease;
+}
+.logoRow  { display: flex; align-items: center; gap: 0.5rem; justify-content: center; margin-bottom: 1.25rem; }
+.logoEmoji{ font-size: 1.75rem; }
+.logoText { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--dark); }
+.title    { font-family: var(--font-display); font-size: 1.65rem; text-align: center; margin-bottom: 0.3rem; }
+.sub      { text-align: center; color: var(--muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+
+.demoRow  { display: flex; gap: 0.6rem; margin-bottom: 1.25rem; }
+.demoBtn  {
+  flex: 1; padding: 0.45rem; background: var(--bg-input);
+  border: 1.5px solid var(--border); border-radius: var(--r-sm);
+  font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);
+  cursor: pointer; transition: all 0.2s;
+}
+.demoBtn:hover { border-color: var(--saffron); color: var(--saffron); }
+
+.form { display: flex; flex-direction: column; gap: 0.875rem; }
+
+.inputWrap  { position: relative; }
+.inputIcon  { position: absolute; left: 0.875rem; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.iconInput  { padding-left: 2.5rem !important; }
+.eyeBtn {
+  position: absolute; right: 0.875rem; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--muted); cursor: pointer;
+  display: flex; align-items: center;
+}
+
+.switch { text-align: center; font-size: 0.875rem; color: var(--muted); margin-top: 1.25rem; }
+.switch a { color: var(--saffron); font-weight: 600; }

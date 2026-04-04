@@ -1,0 +1,60 @@
+/* ProductsPage.module.css */
+.page { padding-top: calc(var(--nav-h) + 2rem); padding-bottom: 4rem; }
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;
+}
+.title { font-family: var(--font-display); font-size: 1.75rem; color: var(--dark); }
+.count { color: var(--text-muted); font-size: 0.875rem; margin-top: 0.2rem; }
+.headerRight { display: flex; align-items: center; gap: 0.75rem; }
+.filterToggle { display: none; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; align-items: center; }
+.clearAll { background: none; border: none; cursor: pointer; font-size: 0.8rem; color: var(--saffron); font-weight: 600; }
+
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; align-items: start; }
+
+/* Sidebar */
+.sidebar {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+  position: sticky; top: calc(var(--nav-h) + 1rem);
+}
+.sidebarHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.sidebarHead h3 { font-size: 1rem; font-weight: 700; color: var(--dark); }
+.sidebarClose { display: none; background: none; border: none; cursor: pointer; color: var(--muted); }
+
+.filterList { display: flex; flex-direction: column; gap: 0.4rem; }
+.filterRadio {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;
+}
+.filterRadio input { accent-color: var(--saffron); }
+
+.priceInputs { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+.pricePresets { display: flex; flex-direction: column; gap: 0.3rem; }
+.preset {
+  background: var(--bg-input); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 0.3rem 0.6rem;
+  font-size: 0.78rem; color: var(--text-secondary); cursor: pointer;
+  text-align: left; transition: all 0.15s;
+}
+.preset:hover { border-color: var(--saffron); color: var(--saffron); }
+
+.main { min-height: 50vh; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .filterToggle { display: flex; }
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: 280px; z-index: 1100; overflow-y: auto;
+    transform: translateX(-100%); transition: transform 0.3s ease;
+    border-radius: 0; border-left: none;
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebarOpen { transform: translateX(0); }
+  .sidebarClose { display: flex; }
+}

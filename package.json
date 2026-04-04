@@ -1,0 +1,13 @@
+{
+  "name": "desicart",
+  "version": "1.0.0",
+  "description": "DesiCart — Full-Stack MERN E-Commerce Platform",
+  "private": true,
+  "scripts": {
+    "backend":   "cd backend && npm run dev",
+    "frontend":  "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed":      "cd backend && npm run seed",
+    "seed:destroy": "cd backend && node data/seeder.js --destroy"
+  }
+}
