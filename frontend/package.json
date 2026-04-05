@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "chmod +x ./node_modules/.bin/vite && vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "postinstall": "chmod +x node_modules/.bin/vite",
+  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+},
   "dependencies": {
     "axios": "^1.6.2",
     "react": "^18.2.0",
